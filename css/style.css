@@ -202,12 +202,12 @@ ul {
     0%,
     100% {
         opacity: 0.3;
-        transform: translateX(-50%) translateY(0);
+        transform: translateX(-50%);
     }
 
     50% {
         opacity: 1;
-        transform: translateX(-50%) translateY(5px);
+        transform: translateX(-50%);
     }
 }
 
