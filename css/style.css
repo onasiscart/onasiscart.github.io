@@ -169,11 +169,51 @@ ul {
 
 /* --- Combined Hero Section --- */
 .hero-combined {
-    padding-top: 100px;
-    /* Reduced from 140px */
-    padding-bottom: 40px;
-    /* Reduced from 80px */
+    min-height: 100vh;
+    padding-top: 54px;
+    /* Navbar height */
+    padding-bottom: 24px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Scroll Indicator --- */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.scroll-indicator:hover {
+    color: var(--accent-matcha);
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
 }
 
 .intro-content {
