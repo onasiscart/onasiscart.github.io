@@ -1,6 +1,6 @@
 /* 
-* Theme: Apple Aesthetic (Merged Layout)
-* Style: Clean, White, Soft Shadows, Rounded
+* Theme: Apple Aesthetic (Visual Refined)
+* Style: Blob Animation, Compact Cards, Clean
 */
 
 :root {
@@ -34,7 +34,8 @@ body {
     background-color: var(--bg-white);
     color: var(--text-primary);
     font-family: var(--font-body);
-    font-size: 17px;
+    font-size: 16px;
+    /* Slightly smaller base font for compactness */
     line-height: 1.5;
 }
 
@@ -69,6 +70,11 @@ ul {
 
 .text-center {
     text-align: center;
+}
+
+.relative-z {
+    position: relative;
+    z-index: 2;
 }
 
 .bg-alt {
@@ -126,17 +132,53 @@ ul {
     cursor: pointer;
 }
 
+/* --- Blob Animation --- */
+.blob-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.matcha-blob {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(138, 176, 125, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    animation: morph 20s ease-in-out infinite alternate;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        transform: translateX(-50%) rotate(20deg);
+    }
+}
+
 /* --- Combined Hero Section --- */
 .hero-combined {
     padding-top: 140px;
-    /* Space for navbar + breathing room */
-    padding-bottom: 100px;
+    padding-bottom: 80px;
+    position: relative;
 }
 
 .intro-content {
     max-width: 700px;
-    margin: 0 auto 80px;
-    /* Gap before cards */
+    margin: 0 auto 60px;
+    /* Reduced gap */
 }
 
 .main-title {
@@ -160,11 +202,13 @@ ul {
     color: var(--accent-matcha-dark);
 }
 
-/* --- Bento Grid (Focus Areas) --- */
+/* --- Bento Grid (Compact Single Line) --- */
 .bento-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 Columns = Single line */
+    gap: 16px;
+    /* Tighter gap */
 }
 
 .card {
@@ -173,9 +217,10 @@ ul {
     box-shadow: var(--card-shadow);
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     overflow: hidden;
-    padding: 40px;
-    text-align: left;
-    /* Keep card content left-aligned for readability */
+    padding: 24px;
+    /* Reduced padding */
+    text-align: center;
+    /* Center align for compact vertical stack */
 }
 
 .card:hover {
@@ -184,26 +229,30 @@ ul {
 }
 
 .icon-circle {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    /* Smaller icon */
+    height: 40px;
     border-radius: 50%;
     background: var(--bg-grey);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--accent-matcha-dark);
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 .feature-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 12px;
+    font-size: 1.1rem;
+    /* Smaller title */
+    margin-bottom: 8px;
 }
 
 .feature-card p {
     color: var(--text-secondary);
-    font-size: 1.05rem;
+    font-size: 0.9rem;
+    /* Smaller text */
+    line-height: 1.3;
 }
 
 /* --- Projects Section --- */
@@ -239,6 +288,7 @@ ul {
     border-radius: var(--radius-m);
     box-shadow: var(--card-shadow);
     transition: 0.3s;
+    text-align: left;
 }
 
 .repo-card:hover {
@@ -284,13 +334,6 @@ ul {
     color: var(--text-secondary);
 }
 
-.language-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    display: inline-block;
-}
-
 .center-btn {
     text-align: center;
 }
@@ -312,7 +355,6 @@ ul {
     border: none;
     padding: 60px 40px;
     box-shadow: none !important;
-    /* Flat block style for footer */
 }
 
 .cta-box h2 {
@@ -360,22 +402,19 @@ ul {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .navbar {
-        bottom: 0;
-        top: auto;
-        border-top: 1px solid rgba(0, 0, 0, 0.05);
+    .matcha-blob {
+        width: 300px;
+        height: 300px;
+        top: -50px;
     }
 
-    .hero-combined {
-        padding-top: 60px;
+    .bento-grid {
+        grid-template-columns: 1fr 1fr;
+        /* 2x2 on mobile */
     }
 
     .main-title {
         font-size: 2.5rem;
-    }
-
-    .bento-grid {
-        grid-template-columns: 1fr;
     }
 
     .nav-menu {

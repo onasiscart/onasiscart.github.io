@@ -15,8 +15,8 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500&display=swap"
         rel="stylesheet">
 
-    <!-- Styles: Version 6 (Merged Layout) -->
-    <link rel="stylesheet" href="css/style.css?v=6">
+    <!-- Styles: Version 7 (Blob + Compact Cards) -->
+    <link rel="stylesheet" href="css/style.css?v=7">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -40,9 +40,14 @@
 
     <main>
 
-        <!-- MAIN LANDING SECTION: Combined Intro + About (Focus) -->
+        <!-- MAIN LANDING SECTION -->
         <section id="about" class="hero-combined">
-            <div class="container text-center">
+            <!-- Background Blob (Restored) -->
+            <div class="blob-container">
+                <div class="matcha-blob"></div>
+            </div>
+
+            <div class="container text-center relative-z">
                 <!-- Intro Part -->
                 <div class="intro-content">
                     <h1 class="main-title">Ona Siscart Noguer</h1>
@@ -53,33 +58,33 @@
                     </p>
                 </div>
 
-                <!-- Bento Grid (Immediately Accessible) -->
+                <!-- Bento Grid (Compact Single Line) -->
                 <div class="bento-grid">
                     <div class="card feature-card">
                         <div class="icon-circle"><i class="fa-solid fa-brain"></i></div>
                         <h3>Agentic AI</h3>
-                        <p>Developing autonomous systems that can reason, plan, and execute complex tasks.</p>
+                        <p>Autonomous systems & planning</p>
                     </div>
                     <div class="card feature-card">
                         <div class="icon-circle"><i class="fa-solid fa-heart-pulse"></i></div>
                         <h3>Health Tech</h3>
-                        <p>Applying machine learning to improve diagnostics and personalized medicine.</p>
+                        <p>ML for diagnostics</p>
                     </div>
                     <div class="card feature-card">
                         <div class="icon-circle"><i class="fa-solid fa-chart-line"></i></div>
                         <h3>Finance</h3>
-                        <p>Quantitative analysis and predictive modeling for financial markets.</p>
+                        <p>Quantitative analysis</p>
                     </div>
                     <div class="card feature-card">
                         <div class="icon-circle"><i class="fa-solid fa-palette"></i></div>
                         <h3>Creative AI</h3>
-                        <p>Exploring the intersection of generative models and artistic expression.</p>
+                        <p>Generative models & art</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- PROJECTS SECTION (Grey Background for contrast) -->
+        <!-- PROJECTS SECTION -->
         <section id="projects" class="section bg-alt">
             <div class="container">
                 <div class="section-header">
@@ -88,7 +93,7 @@
                 </div>
 
                 <div id="projects-grid" class="projects-grid">
-                    <!-- JS Injects Repo Cards Here -->
+                    <!-- JS Injects Projects -->
                     <div class="loading-state">Loading Projects...</div>
                 </div>
 
@@ -104,7 +109,7 @@
             <div class="container">
                 <div class="cta-box card">
                     <h2>Ready to Collaborate?</h2>
-                    <p>I'm always open to discussing new research opportunities and innovative ideas.</p>
+                    <p>Open to research opportunities and innovative ideas.</p>
                     <div class="social-row">
                         <a href="mailto:ona.siscart@estudiantat.upc.edu" class="social-btn"><i
                                 class="fa-solid fa-envelope"></i> Email</a>
