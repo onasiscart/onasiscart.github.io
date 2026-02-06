@@ -1,5 +1,5 @@
 /* 
-* Theme: Apple Aesthetic Refined
+* Theme: Apple Aesthetic Refined (Simplified Content)
 * Style: Modern, Clean, Tech-y, Depth-focused
 */
 
@@ -68,7 +68,11 @@ ul {
 }
 
 .section {
-    padding: 100px 0;
+    padding: 80px 0;
+}
+
+.pt-0 {
+    padding-top: 0 !important;
 }
 
 .bg-alt {
@@ -79,20 +83,17 @@ ul {
     text-align: center;
 }
 
+.text-left {
+    text-align: left;
+}
+
 .section-header {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 60px;
+    margin-bottom: 40px;
 }
 
 .section-header h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-
-.section-desc {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
+    font-size: 2.2rem;
+    color: var(--text-primary);
 }
 
 /* --- Components --- */
@@ -131,16 +132,6 @@ ul {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.btn-secondary {
-    background-color: transparent;
-    color: var(--text-primary);
-    border: 1px solid #d2d2d7;
-}
-
-.btn-secondary:hover {
-    border-color: var(--text-primary);
-}
-
 .btn-text {
     color: var(--accent-matcha-dark);
     font-weight: 600;
@@ -152,13 +143,13 @@ ul {
 
 /* --- Navbar (Apple Style) --- */
 .navbar {
-    position: fixed;
+    position: sticky;
+    /* Sticky instead of fixed often feels better on simple pages, but let's stick to fixed for consistency */
     top: 0;
     left: 0;
     width: 100%;
-    height: 54px;
-    /* Standard efficient height */
-    background: rgba(255, 255, 255, 0.7);
+    height: 60px;
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -179,7 +170,7 @@ ul {
 
 .logo {
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: var(--text-primary);
 }
 
@@ -189,7 +180,7 @@ ul {
 }
 
 .nav-menu a {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--text-secondary);
     font-weight: 500;
 }
@@ -204,53 +195,36 @@ ul {
     cursor: pointer;
 }
 
-/* --- Hero Section --- */
-.hero-section {
-    padding-top: 180px;
-    padding-bottom: 120px;
-    text-align: center;
-    background: radial-gradient(circle at 50% 30%, #fbfdfb 0%, #ffffff 60%);
+/* --- Intro Block (Replaces Hero) --- */
+.intro-block {
+    padding: 120px 0 60px;
+    /* Top padding clears navbar */
+    text-align: left;
 }
 
-.badge {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--accent-matcha-dark);
-    margin-bottom: 24px;
+.intro-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--text-primary);
 }
 
-.hero-title {
-    font-size: 4rem;
-    line-height: 1.05;
-    margin-bottom: 24px;
+.mission-statement {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: var(--text-secondary);
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    font-weight: 400;
+}
+
+.mission-statement strong {
+    color: var(--text-primary);
+    font-weight: 600;
 }
 
 .accent-text {
-    color: var(--accent-matcha);
-    background: linear-gradient(135deg, var(--accent-matcha-dark), var(--accent-matcha));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.hero-subtitle {
-    font-size: 1.35rem;
-    line-height: 1.5;
-    color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto 40px;
-}
-
-.input-group-mock {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
+    color: var(--accent-matcha-dark);
+    font-weight: 600;
 }
 
 /* --- Features / Bento Grid --- */
@@ -261,38 +235,41 @@ ul {
 }
 
 .feature-card {
-    padding: 40px;
+    padding: 32px;
+    /* Slightly tighter than before */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
 .icon-circle {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     background: var(--bg-grey);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--accent-matcha-dark);
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .feature-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 12px;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
 }
 
 .feature-card p {
     color: var(--text-secondary);
+    font-size: 1rem;
 }
 
 /* --- Projects Section --- */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    /* Slightly wider cards */
     gap: 24px;
     margin-bottom: 40px;
 }
@@ -304,7 +281,6 @@ ul {
 /* Repo Card Customization */
 .repo-card {
     background: white;
-    /* Contrast against grey bg section */
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -321,7 +297,6 @@ ul {
 .repo-header i {
     font-size: 1.5rem;
     color: #ceced2;
-    /* Subtle icon until hover */
     transition: color 0.3s;
 }
 
@@ -331,7 +306,7 @@ ul {
 
 .repo-title {
     font-size: 1.25rem;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .repo-description {
@@ -361,26 +336,29 @@ ul {
 /* --- Footer Area --- */
 .cta-box {
     background: var(--bg-grey);
-    padding: 60px;
+    padding: 50px;
     text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.02);
+    border: none;
+    box-shadow: none;
+    /* Flatter looks better for footer block sometimes, but keeping consistent is OK. Let's make it flat grey block style */
+    border-radius: var(--radius-l);
 }
 
 .cta-box h2 {
-    font-size: 2.5rem;
-    margin-bottom: 16px;
+    font-size: 2rem;
+    margin-bottom: 12px;
 }
 
 .cta-box p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--text-secondary);
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .social-row {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
@@ -388,7 +366,7 @@ ul {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 10px 24px;
+    padding: 10px 20px;
     background: white;
     border-radius: 99px;
     color: var(--text-primary);
@@ -407,20 +385,29 @@ ul {
     text-align: center;
     color: #999;
     font-size: 0.85rem;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
     .navbar {
+        position: fixed;
         bottom: 0;
         top: auto;
         border-top: 1px solid rgba(0, 0, 0, 0.05);
         border-bottom: none;
     }
 
-    .hero-title {
+    .intro-block {
+        padding-top: 60px;
+    }
+
+    .intro-text h1 {
         font-size: 2.5rem;
+    }
+
+    .mission-statement {
+        font-size: 1.2rem;
     }
 
     .bento-grid {
@@ -430,8 +417,6 @@ ul {
     .nav-menu {
         display: none;
     }
-
-    /* Could add mobile functionality later */
 
     .mobile-toggle {
         display: block;
