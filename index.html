@@ -1,0 +1,157 @@
+https://onasiscart.github.io/
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ona Siscart | Data Science & Engineering</title>
+    <meta name="description"
+        content="Portfolio of Ona Siscart Noguer, a Data Science and Engineering student at UPC specializing in Generative and Agentic AI.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Background Elements -->
+    <div class="bg-gradient-1"></div>
+    <div class="bg-gradient-2"></div>
+    <div class="grid-overlay"></div>
+
+    <header class="glass-header">
+        <nav>
+            <div class="logo">Ona Siscart</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <span class="badge">Data Science & Engineering Student</span>
+                <h1>Exploring the Frontiers of <span class="gradient-text">AI & Data</span></h1>
+                <p>Third-year student at <strong>UPC</strong>. Merging research and industry interests to build the
+                    future of Health, Finance, and Creative Tech.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn primary">View Projects</a>
+                    <a href="#contact" class="btn secondary">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About Me</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text glass-card">
+                        <p>I am a passionate <strong>Data Science and Engineering</strong> student in my third year at
+                            <strong>Universitat Politècnica de Catalunya (UPC)</strong>. My academic journey is driven
+                            by a curiosity to understand complex systems and immense data.</p>
+                        <p>My goal is to bridge the gap between cutting-edge <strong>research</strong> and practical
+                            <strong>industry</strong> applications. I focus on:</p>
+                        <ul class="interest-list">
+                            <li><i class="fa-solid fa-brain"></i> Generative & Agentic AI</li>
+                            <li><i class="fa-solid fa-heart-pulse"></i> Health Tech</li>
+                            <li><i class="fa-solid fa-chart-line"></i> Quantitative Finance</li>
+                            <li><i class="fa-solid fa-palette"></i> Creative AI</li>
+                        </ul>
+                    </div>
+                    <div class="about-visual">
+                        <!-- Abstract representation of stats or skills -->
+                        <div class="stat-card glass-card">
+                            <h3>Focus</h3>
+                            <div class="tags">
+                                <span>Machine Learning</span>
+                                <span>Deep Learning</span>
+                                <span>Python</span>
+                                <span>Data Warehousing</span>
+                                <span>ETL Pipelines</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Projects</h2>
+                    <div class="line"></div>
+                </div>
+                <div id="projects-grid" class="projects-grid">
+                    <!-- Projects will be injected here by JS -->
+                    <div class="loading-spinner">Loading Projects...</div>
+                </div>
+                <!-- Fallback content if API fails or for SEO -->
+                <noscript>
+                    <div class="project-card">
+                        <h3>Catalonia_Connected_project</h3>
+                        <p>Python-based project that generates "maps" (simplified graphs) of hiking paths and shortest
+                            routes to monuments in Catalonia.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Liver_Disease_Classification</h3>
+                        <p>Machine Learning project aimed at diagnosing liver disease through patient classification.
+                        </p>
+                    </div>
+                </noscript>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="glass-card contact-card">
+                    <h2>Let's Connect</h2>
+                    <p>I'm always open to discussing new opportunities, research collaborations, or innovative ideas in
+                        AI.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/onasiscart" target="_blank" aria-label="GitHub"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="mailto:ona.siscart@estudiantat.upc.edu" aria-label="Email"><i
+                                class="fa-solid fa-envelope"></i></a>
+                        <!-- Add LinkedIn if available, placeholder for now -->
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ona Siscart Noguer. Built with <i class="fa-solid fa-code"></i> and AI.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
