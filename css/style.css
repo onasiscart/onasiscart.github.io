@@ -169,20 +169,25 @@ ul {
 
 /* --- Combined Hero Section --- */
 .hero-combined {
-    padding-top: 140px;
-    padding-bottom: 80px;
+    padding-top: 100px;
+    /* Reduced from 140px */
+    padding-bottom: 40px;
+    /* Reduced from 80px */
     position: relative;
 }
 
 .intro-content {
     max-width: 700px;
-    margin: 0 auto 50px;
+    margin: 0 auto 30px;
+    /* Reduced bottom margin from 50px */
 }
 
 .main-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
+    /* Reduced from 3.5rem */
     line-height: 1.1;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+    /* Reduced from 24px */
     color: var(--text-primary);
 }
 
@@ -202,7 +207,8 @@ ul {
 
 /* --- Profile Picture --- */
 .profile-container {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+    /* Reduced from 24px */
     animation: fadeScale 0.8s ease-out;
 }
 
@@ -238,7 +244,8 @@ ul {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--text-secondary);
-    margin-bottom: 20px;
+    margin-bottom: 12px;
+    /* Reduced from 20px */
     font-weight: 600;
 }
 
