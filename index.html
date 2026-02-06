@@ -12,11 +12,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500&display=swap"
         rel="stylesheet">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Styles: Version 3 to force cache update -->
+    <link rel="stylesheet" href="css/style.css?v=3">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,98 +24,111 @@
 
 <body>
 
-    <header class="compact-header">
-        <div class="header-inner">
+    <header class="main-header">
+        <nav>
             <div class="logo">Ona Siscart</div>
-            <nav>
-                <a href="#home">Overview</a>
-                <a href="#projects">projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
     </header>
 
-    <main class="dashboard-layout">
-
-        <!-- TOP ROW: INTRO + QUICK STATS -->
-        <div class="dashboard-row" id="home">
-
-            <!-- LEFT: INTRO CARD -->
-            <section class="card intro-card">
-                <div class="card-content">
-                    <span class="status-badge"><i class="fa-solid fa-circle"></i> Open to Research & Industry</span>
-                    <h1>Data Science &<br>Engineering Student</h1>
-                    <p class="subtitle">Third-year at <strong>UPC</strong>. Merging Generative AI with Health, Finance,
-                        and Creative Tech.</p>
-
-                    <div class="action-buttons">
-                        <a href="#projects" class="btn primary">View Work</a>
-                        <a href="mailto:ona.siscart@estudiantat.upc.edu" class="btn secondary">Email Me</a>
+    <main>
+        <!-- HERO SECTION -->
+        <section id="home" class="section hero">
+            <div class="container grid-2-col">
+                <div class="hero-text">
+                    <span class="status-pill">Data Science & Engineering Student</span>
+                    <h1>Exploring <span class="highlight">Artificial Intelligence</span> & Complex Systems</h1>
+                    <p>Third-year student at <strong>UPC</strong>. Merging research and industry interests to build the
+                        future of Health, Finance, and Creative Tech.</p>
+                    <div class="btn-group">
+                        <a href="#projects" class="btn primary">View Projects</a>
+                        <a href="#about" class="btn secondary">More About Me</a>
                     </div>
                 </div>
-            </section>
-
-            <!-- RIGHT: FOCUS AREA / SKILLS -->
-            <section class="card focus-card">
-                <h3>Core Focus</h3>
-                <ul class="focus-list">
-                    <li>
-                        <span class="icon-box"><i class="fa-solid fa-brain"></i></span>
-                        <div class="focus-text">
-                            <strong>Agentic AI</strong>
-                            <span>Autonomous Systems</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="icon-box"><i class="fa-solid fa-heart-pulse"></i></span>
-                        <div class="focus-text">
-                            <strong>Health Tech</strong>
-                            <span>Medical AI Applications</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="icon-box"><i class="fa-solid fa-chart-line"></i></span>
-                        <div class="focus-text">
-                            <strong>Finance</strong>
-                            <span>Quantitative Analysis</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="icon-box"><i class="fa-solid fa-palette"></i></span>
-                        <div class="focus-text">
-                            <strong>Creative</strong>
-                            <span>Generative Design</span>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-        </div>
-
-        <!-- MIDDLE ROW: PROJECTS -->
-        <section id="projects" class="projects-section">
-            <div class="section-title-row">
-                <h2>Selected Projects</h2>
-                <a href="https://github.com/onasiscart" target="_blank" class="view-all-link">View GitHub <i
-                        class="fa-solid fa-arrow-right"></i></a>
-            </div>
-
-            <div id="projects-grid" class="projects-compact-grid">
-                <!-- Injected via JS -->
-                <div class="loading-state">Loading GitHub Data...</div>
+                <!-- Visual/Abstract Element -->
+                <div class="hero-visual">
+                    <div class="matcha-blob"></div>
+                </div>
             </div>
         </section>
 
-        <!-- BOTTOM: CONTACT / FOOTER -->
-        <footer id="contact" class="compact-footer">
-            <div class="footer-content">
-                <p>&copy; 2026 Ona Siscart Noguer</p>
-                <div class="footer-links">
-                    <a href="https://github.com/onasiscart" target="_blank">GitHub</a>
-                    <a href="mailto:ona.siscart@estudiantat.upc.edu">Email</a>
-                    <a href="#">LinkedIn</a>
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section about">
+            <div class="container grid-2-col">
+                <div class="about-info">
+                    <div class="section-header-left">
+                        <h2>About Me</h2>
+                        <div class="line"></div>
+                    </div>
+                    <p>I am a passionate <strong>Data Science and Engineering</strong> student in my third year at
+                        <strong>Universitat Politècnica de Catalunya (UPC)</strong>.</p>
+                    <p>My academic journey is driven by a curiosity to understand complex systems and immense data. My
+                        goal is to bridge the gap between cutting-edge <strong>research</strong> and practical
+                        <strong>industry</strong> applications.</p>
+                </div>
+
+                <div class="about-interests">
+                    <h3>Core Focus</h3>
+                    <div class="interest-grid">
+                        <div class="interest-item">
+                            <i class="fa-solid fa-brain"></i>
+                            <span>Generative & Agentic AI</span>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                            <span>Health Tech</span>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>Quantitative Finance</span>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fa-solid fa-palette"></i>
+                            <span>Creative AI</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="section projects">
+            <div class="container">
+                <div class="section-header-center">
+                    <h2>Featured Projects</h2>
+                    <div class="line"></div>
+                </div>
+
+                <div id="projects-grid" class="projects-grid">
+                    <div class="loading-spinner">Loading Projects...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section contact">
+            <div class="container text-center">
+                <h2>Let's Connect</h2>
+                <div class="social-links-row">
+                    <a href="https://github.com/onasiscart" target="_blank" aria-label="GitHub"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="mailto:ona.siscart@estudiantat.upc.edu" aria-label="Email"><i
+                            class="fa-solid fa-envelope"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <p class="copyright">&copy; 2026 Ona Siscart Noguer</p>
+            </div>
+        </section>
 
     </main>
 
