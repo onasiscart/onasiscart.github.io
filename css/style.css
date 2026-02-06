@@ -1,27 +1,23 @@
 /* 
-* Theme: Apple Aesthetic Refined (Simplified Content)
-* Style: Modern, Clean, Tech-y, Depth-focused
+* Theme: Apple Aesthetic (Merged Layout)
+* Style: Clean, White, Soft Shadows, Rounded
 */
 
 :root {
     --bg-white: #ffffff;
     --bg-grey: #F5F5F7;
-    /* Apple "Light Grey" */
 
     --text-primary: #1d1d1f;
-    /* Almost black */
     --text-secondary: #86868b;
-    /* Apple grey text */
 
     --accent-matcha: #8ab07d;
     --accent-matcha-dark: #5c7f50;
 
-    --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-    --card-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.12);
+    --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+    --card-shadow-hover: 0 10px 40px rgba(0, 0, 0, 0.1);
 
     --radius-l: 24px;
     --radius-m: 16px;
-    --radius-s: 12px;
 
     --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-body: 'Space Grotesk', -apple-system, sans-serif;
@@ -68,92 +64,28 @@ ul {
 }
 
 .section {
-    padding: 80px 0;
-}
-
-.pt-0 {
-    padding-top: 0 !important;
-}
-
-.bg-alt {
-    background-color: var(--bg-grey);
+    padding: 100px 0;
 }
 
 .text-center {
     text-align: center;
 }
 
-.text-left {
-    text-align: left;
+.bg-alt {
+    background-color: var(--bg-grey);
 }
 
-.section-header {
-    margin-bottom: 40px;
-}
-
-.section-header h2 {
-    font-size: 2.2rem;
-    color: var(--text-primary);
-}
-
-/* --- Components --- */
-.card {
-    background: white;
-    border-radius: var(--radius-m);
-    box-shadow: var(--card-shadow);
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    overflow: hidden;
-}
-
-.card:hover {
-    box-shadow: var(--card-shadow-hover);
-    transform: translateY(-4px);
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 28px;
-    border-radius: 999px;
-    /* Pill shape */
-    font-size: 1rem;
-    font-weight: 500;
-    transition: all 0.3s;
-}
-
-.btn-primary {
-    background-color: var(--text-primary);
-    color: white;
-}
-
-.btn-primary:hover {
-    background-color: #333;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.btn-text {
-    color: var(--accent-matcha-dark);
-    font-weight: 600;
-}
-
-.btn-text:hover {
-    color: var(--text-primary);
-}
-
-/* --- Navbar (Apple Style) --- */
+/* --- Navbar --- */
 .navbar {
-    position: sticky;
-    /* Sticky instead of fixed often feels better on simple pages, but let's stick to fixed for consistency */
+    position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.85);
+    height: 54px;
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;
 }
@@ -170,17 +102,17 @@ ul {
 
 .logo {
     font-weight: 600;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: var(--text-primary);
 }
 
 .nav-menu {
     display: flex;
-    gap: 28px;
+    gap: 24px;
 }
 
 .nav-menu a {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--text-secondary);
     font-weight: 500;
 }
@@ -191,113 +123,139 @@ ul {
 
 .mobile-toggle {
     display: none;
-    color: var(--text-primary);
     cursor: pointer;
 }
 
-/* --- Intro Block (Replaces Hero) --- */
-.intro-block {
-    padding: 120px 0 60px;
-    /* Top padding clears navbar */
-    text-align: left;
+/* --- Combined Hero Section --- */
+.hero-combined {
+    padding-top: 140px;
+    /* Space for navbar + breathing room */
+    padding-bottom: 100px;
 }
 
-.intro-text h1 {
+.intro-content {
+    max-width: 700px;
+    margin: 0 auto 80px;
+    /* Gap before cards */
+}
+
+.main-title {
     font-size: 3.5rem;
     line-height: 1.1;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     color: var(--text-primary);
 }
 
-.mission-statement {
-    font-size: 1.5rem;
-    line-height: 1.4;
+.mission-text {
+    font-size: 1.35rem;
     color: var(--text-secondary);
-    max-width: 800px;
-    font-weight: 400;
+    line-height: 1.5;
 }
 
-.mission-statement strong {
+.mission-text strong {
     color: var(--text-primary);
-    font-weight: 600;
 }
 
-.accent-text {
+.accent-matcha {
     color: var(--accent-matcha-dark);
-    font-weight: 600;
 }
 
-/* --- Features / Bento Grid --- */
+/* --- Bento Grid (Focus Areas) --- */
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
 
-.feature-card {
-    padding: 32px;
-    /* Slightly tighter than before */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.card {
+    background: white;
+    border-radius: var(--radius-m);
+    box-shadow: var(--card-shadow);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    padding: 40px;
+    text-align: left;
+    /* Keep card content left-aligned for readability */
+}
+
+.card:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-4px);
 }
 
 .icon-circle {
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background: var(--bg-grey);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--accent-matcha-dark);
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .feature-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
 }
 
 .feature-card p {
     color: var(--text-secondary);
-    font-size: 1rem;
+    font-size: 1.05rem;
 }
 
 /* --- Projects Section --- */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section-desc {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    /* Slightly wider cards */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 24px;
     margin-bottom: 40px;
 }
 
-.center-btn {
-    text-align: center;
-}
-
-/* Repo Card Customization */
+/* Project Cards */
 .repo-card {
     background: white;
     padding: 30px;
     display: flex;
     flex-direction: column;
     height: 100%;
+    border-radius: var(--radius-m);
+    box-shadow: var(--card-shadow);
+    transition: 0.3s;
+}
+
+.repo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-shadow-hover);
 }
 
 .repo-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     margin-bottom: 16px;
 }
 
 .repo-header i {
     font-size: 1.5rem;
-    color: #ceced2;
-    transition: color 0.3s;
+    color: #d0d0d5;
+    transition: 0.3s;
 }
 
 .repo-card:hover .repo-header i {
@@ -311,10 +269,10 @@ ul {
 
 .repo-description {
     color: var(--text-secondary);
-    font-size: 0.95rem;
-    line-height: 1.6;
     margin-bottom: 24px;
     flex-grow: 1;
+    line-height: 1.5;
+    font-size: 0.95rem;
 }
 
 .repo-stats {
@@ -333,51 +291,63 @@ ul {
     display: inline-block;
 }
 
-/* --- Footer Area --- */
+.center-btn {
+    text-align: center;
+}
+
+.btn-text {
+    color: var(--accent-matcha-dark);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.btn-text:hover {
+    color: var(--text-primary);
+}
+
+/* --- Footer --- */
 .cta-box {
     background: var(--bg-grey);
-    padding: 50px;
     text-align: center;
     border: none;
-    box-shadow: none;
-    /* Flatter looks better for footer block sometimes, but keeping consistent is OK. Let's make it flat grey block style */
-    border-radius: var(--radius-l);
+    padding: 60px 40px;
+    box-shadow: none !important;
+    /* Flat block style for footer */
 }
 
 .cta-box h2 {
     font-size: 2rem;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 .cta-box p {
     font-size: 1.1rem;
     color: var(--text-secondary);
-    margin-bottom: 24px;
+    margin-bottom: 30px;
 }
 
 .social-row {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
+    gap: 16px;
 }
 
 .social-btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 10px 20px;
+    padding: 10px 24px;
     background: white;
     border-radius: 99px;
     color: var(--text-primary);
     font-weight: 500;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: 0.3s;
 }
 
 .social-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
     color: var(--accent-matcha-dark);
 }
 
@@ -385,29 +355,23 @@ ul {
     text-align: center;
     color: #999;
     font-size: 0.85rem;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
-/* --- Responsive --- */
+/* Responsive */
 @media (max-width: 768px) {
     .navbar {
-        position: fixed;
         bottom: 0;
         top: auto;
         border-top: 1px solid rgba(0, 0, 0, 0.05);
-        border-bottom: none;
     }
 
-    .intro-block {
+    .hero-combined {
         padding-top: 60px;
     }
 
-    .intro-text h1 {
+    .main-title {
         font-size: 2.5rem;
-    }
-
-    .mission-statement {
-        font-size: 1.2rem;
     }
 
     .bento-grid {

@@ -15,8 +15,8 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500&display=swap"
         rel="stylesheet">
 
-    <!-- Styles: Version 5 (Simplified Content) -->
-    <link rel="stylesheet" href="css/style.css?v=5">
+    <!-- Styles: Version 6 (Merged Layout) -->
+    <link rel="stylesheet" href="css/style.css?v=6">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -26,9 +26,9 @@
 
     <header class="navbar">
         <div class="navbar-content">
-            <a href="#" class="logo">Ona Siscart Noguer</a> <!-- Full Name in Logo/Top left -->
+            <a href="#" class="logo">Ona Siscart</a>
             <nav class="nav-menu">
-                <a href="#about">About</a>
+                <a href="#about">Overview</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -40,23 +40,20 @@
 
     <main>
 
-        <!-- INTRO BLOCK: Simple, text-focused -->
-        <section class="intro-block">
-            <div class="container">
-                <div class="intro-text">
-                    <h1>Ona Siscart Noguer</h1>
-                    <p class="mission-statement">
-                        Driven by a passion to <strong>merge research with industry</strong>. <br>
-                        I build <span class="accent-text">Generative & Agentic AI</span> systems to transform Health,
-                        Finance, and Creative fields.
+        <!-- MAIN LANDING SECTION: Combined Intro + About (Focus) -->
+        <section id="about" class="hero-combined">
+            <div class="container text-center">
+                <!-- Intro Part -->
+                <div class="intro-content">
+                    <h1 class="main-title">Ona Siscart Noguer</h1>
+                    <p class="mission-text">
+                        Data Science & Engineering Student at <strong>UPC</strong>. <br>
+                        Merging <span class="accent-matcha">research</span> with <span
+                            class="accent-matcha">industry</span> to build the future of AI.
                     </p>
                 </div>
-            </div>
-        </section>
 
-        <!-- ABOUT SECTION: Focus areas (Keep this high up) -->
-        <section id="about" class="section pt-0"> <!-- pt-0 to reduce gap -->
-            <div class="container">
+                <!-- Bento Grid (Immediately Accessible) -->
                 <div class="bento-grid">
                     <div class="card feature-card">
                         <div class="icon-circle"><i class="fa-solid fa-brain"></i></div>
@@ -82,14 +79,16 @@
             </div>
         </section>
 
-        <!-- PROJECTS SECTION: The core content -->
+        <!-- PROJECTS SECTION (Grey Background for contrast) -->
         <section id="projects" class="section bg-alt">
             <div class="container">
-                <div class="section-header text-left"> <!-- Left align for cleaner flow -->
-                    <h2>Selected Projects</h2>
+                <div class="section-header">
+                    <h2>Featured Work</h2>
+                    <p class="section-desc">Academic and personal projects leveraging AI & Data.</p>
                 </div>
 
                 <div id="projects-grid" class="projects-grid">
+                    <!-- JS Injects Repo Cards Here -->
                     <div class="loading-state">Loading Projects...</div>
                 </div>
 
